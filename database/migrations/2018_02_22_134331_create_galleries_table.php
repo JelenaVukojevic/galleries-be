@@ -19,7 +19,7 @@ class CreateGalleriesTable extends Migration
             $table->string('description');
             $table->unsignedInteger('author_id');
             $table->foreign('author_id')
-                ->referencesd('id')
+                ->references('id')
                 ->on('users');
             $table->timestamps();
         });

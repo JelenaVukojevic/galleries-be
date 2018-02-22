@@ -14,7 +14,7 @@ class GalleryController extends Controller
      */
     public function index()
     {
-        return Gallery::with('pictures')->paginate(10);
+        return Gallery::with(['user', 'images'])->paginate(10);
     }
 
     /**
